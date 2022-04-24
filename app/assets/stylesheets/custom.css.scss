@@ -1,0 +1,72 @@
+nav.navbar {
+  background-color: #073b15;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.jumbotron {
+  background-color: hsl(0, 0%, 94%);
+  background-image: asset_url("cover_image.jpg");
+}
+
+.jumbotron .display-4,
+p.lead {
+  color: black;
+  font-weight: bold;
+}
+
+.btn.btn-lg {
+  background-color: #073b15;
+  border-color: #073b15;
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  height: 100%;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
