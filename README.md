@@ -16,9 +16,16 @@ To get started with the app, clone the repo and `cd` into the directory:
 ```
 $ git clone https://github.com/coderdave/myrecipes.git
 $ cd myrecipes
+$ git checkout initial
 ```
 
-Then install the needed gems:
+---
+
+IMPORTANT: SWITCH TO THE `INITIAL` BRANCH!
+
+---
+
+After switching to the `initial` branch, install the needed gems:
 
 ```
 $ bundle install
