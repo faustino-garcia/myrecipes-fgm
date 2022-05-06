@@ -9,7 +9,7 @@ First of all, do you have ruby v2.75 and rails v6.1.5 installed?
 - Windows 10: https://gorails.com/setup/windows/10
 - macOS: https://gorails.com/setup/osx/12-monterey
 
-Also, if you don't have node, install that first too: https://heynode.com/tutorial/install-nodejs-locally-nvm/
+Also, if you don't have node, install that too: https://heynode.com/tutorial/install-nodejs-locally-nvm/
 
 To get started with the app, clone the repo and `cd` into the directory:
 
