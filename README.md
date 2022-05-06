@@ -4,10 +4,12 @@ Based on the "Professional Ruby on Rails Developer with Rails 5" course on Udemy
 
 ## Getting started
 
-First of all, do you have ruby and rails installed?
+First of all, do you have ruby v2.75 and rails v6.1.5 installed?
 
 - Windows 10: https://gorails.com/setup/windows/10
 - macOS: https://gorails.com/setup/osx/12-monterey
+
+Also, if you don't have node, install that first too: https://heynode.com/tutorial/install-nodejs-locally-nvm/
 
 To get started with the app, clone the repo and `cd` into the directory:
 
@@ -21,8 +23,6 @@ Then install the needed gems:
 ```
 $ bundle install
 ```
-
-If you don't have node, install that first: https://heynode.com/tutorial/install-nodejs-locally-nvm/
 
 Install JavaScript dependencies:
 
