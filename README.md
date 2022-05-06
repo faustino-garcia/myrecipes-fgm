@@ -1,24 +1,55 @@
-# README
+# MyRecipes sample application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Based on the "Professional Ruby on Rails Developer with Rails 5" course on Udemy.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+First of all, do you have ruby and rails installed?
 
-* System dependencies
+- Windows 10: https://gorails.com/setup/windows/10
+- macOS: https://gorails.com/setup/osx/12-monterey
 
-* Configuration
+To get started with the app, clone the repo and `cd` into the directory:
 
-* Database creation
+```
+$ git clone https://github.com/coderdave/myrecipes.git
+$ cd myrecipes
+```
 
-* Database initialization
+Then install the needed gems:
 
-* How to run the test suite
+```
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+If you don't have node, install that first: https://heynode.com/tutorial/install-nodejs-locally-nvm/
 
-* Deployment instructions
+Install JavaScript dependencies:
 
-* ...
+```
+$ npm install
+```
+
+Next, migrate the database:
+
+```
+$ rails db:migrate
+```
+
+Finally, run the test suite to verify that everything is working correctly:
+
+```
+$ rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+Open up your favorite browser (it better be Chrome) and go to:
+
+```
+http://localhost:3000/
+```
