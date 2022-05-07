@@ -65,7 +65,7 @@ Then, to set up credentials for the test database, run the following command:
 $ EDITOR='code --wait' rails credentials:edit --environment test
 ```
 
-Agaain, insert the same information you entered for the development database.
+Again, insert the same information you entered for the development database.
 
 ```
 mysql:
@@ -96,4 +96,4 @@ Open up your favorite browser (I hope it's Chrome!) and go to:
 http://localhost:3000/
 ```
 
-Create your own branch from start the Udemy course!
+Create your own branch and start the Udemy course!
