@@ -37,6 +37,7 @@ IMPORTANT: Switch to the `initial` branch. You will branch off from here to do y
 After switching to the `initial` branch, install the needed gems:
 
 ```
+$ gem install bundler
 $ bundle install
 ```
 
