@@ -53,6 +53,8 @@ Next, your local mysql database is expecting a password. If you want, check out 
 $ EDITOR='code --wait' rails credentials:edit --environment development
 ```
 
+For windows, use the command: `code -w rails credentials:edit --environment development`
+
 VS Code will open to the credentials configuration file for development. Now insert the following with the password you set for mysql when you installed it.
 
 ```
@@ -60,7 +62,7 @@ mysql:
   db_password: your_password
 ```
 
-Then, to set up credentials for the test database, run the following command:
+Then, to set up credentials for the test database, run the following command on a mac:
 
 ```
 $ EDITOR='code --wait' rails credentials:edit --environment test
