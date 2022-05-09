@@ -47,7 +47,7 @@ Install JavaScript dependencies:
 $ npm install
 ```
 
-Next, your local mysql database is expecting a password. If you want, check out the `database.yml` file for details on how rails connects to mysql. To set up credentials for the development database, run the following command:
+Next, your local mysql database is expecting a password. If you want, check out the `database.yml` file for details on how rails connects to mysql. To set up credentials for the development database, run the following command (on mac):
 
 ```
 $ EDITOR='code --wait' rails credentials:edit --environment development
