@@ -1,8 +1,12 @@
+$navbar-default-bg: black;
+$default-green: #073b15;
+$blue-yonder: #4267B2;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 nav.navbar {
-  background-color: #073b15;
+  background-color: $blue-yonder;
 }
 
 #logo {
@@ -12,6 +16,12 @@ nav.navbar {
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+nav.navbar .nav-link {
+  color: white;
 }
 
 #logo:hover {
@@ -31,8 +41,8 @@ p.lead {
 }
 
 .btn.btn-lg {
-  background-color: #073b15;
-  border-color: #073b15;
+  background-color: $blue-yonder;
+  border-color: $blue-yonder;
 }
 
 .center {
