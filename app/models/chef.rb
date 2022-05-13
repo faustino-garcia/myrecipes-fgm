@@ -6,4 +6,5 @@ class Chef < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, 
     uniqueness: {case_sensitive: false} 
     #here it is unnecesary to specify uniqueness: true because it's alredy testing for it
+    has_many :recipes
 end
