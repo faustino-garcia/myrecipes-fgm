@@ -11,6 +11,8 @@ gem 'bootstrap-sass','~> 3.3.6'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+
+gem 'sassc'
 # JS library
 gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -54,9 +56,9 @@ group :test do
   gem 'webdrivers'
 end
 
-group :production do
-  # gem "pg", "~> 1.3"
-end
+# group :production do
+#   # gem "pg", "~> 1.3"
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
