@@ -7,4 +7,6 @@ class Chef < ApplicationRecord
     uniqueness: {case_sensitive: false} 
     #here it is unnecesary to specify uniqueness: true because it's alredy testing for it
     has_many :recipes
+    has_secure_password
+    validates :password, presence: true, length: {minimum: 5}
 end
