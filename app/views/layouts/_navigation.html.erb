@@ -7,11 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
                     <%= link_to "Chefs",chefs_path, class:"nav-link active" %>
                 </li>
+                <li class="nav-item">
+                    <%= link_to "All recipes",recipes_path, class:"nav-link active" %>
+                </li>
+
+                <% if logged_in? %>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Recipes
@@ -28,11 +30,33 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
+                <% end %>
             </ul>
+
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                <% if logged_in? %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= current_chef.name.capitalize %>'s Profile
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li> <%= link_to "View your profile",chef_path(current_chef),class:"dropdown-item" %> </li>
+                    <li> <%= link_to "Edit your profile",edit_chef_path(current_chef),class:"dropdown-item" %> </li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li class="divider" role="separator"></li>
+                    <li> <%= link_to "Log out", logout_path, method: :delete %> </li>
+                    </ul>
+                </li>
+                <% else %>
+                    <li> <%= link_to "Log in",login_path %> </li>
+                <% end %>
+            </ul>
         </div>
     </div>
 </nav>

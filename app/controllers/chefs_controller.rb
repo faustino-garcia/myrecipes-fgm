@@ -1,5 +1,7 @@
 class ChefsController < ApplicationController
 
+    before_action :set_chef, only: [:show,:edit,:update,:destroy]
+
     def new
         @chef = Chef.new
     end
@@ -11,6 +13,7 @@ class ChefsController < ApplicationController
     def create
         @chef = Chef.new(chef_params)
         if @chef.save
+            session[:chef_id] = @chef.id
             flash[:success] = "Welcome #{@chef.name} to MyRecipes App! "
             redirect_to chef_path(@chef)
         else 
@@ -19,18 +22,15 @@ class ChefsController < ApplicationController
     end
 
     def show
-        @chef = Chef.find(params[:id])
         @chef_recipes = @chef.recipes.paginate(page: params[:page], per_page: 3)
         #A collection o 5 recipes per page, we are using this in order to show 3 recipes 
         #per page on the chefs recipes show
     end
 
-    def edit 
-        @chef = Chef.find(params[:id])
+    def edit     
     end
 
     def update
-        @chef = Chef.find(params[:id])
         if @chef.update(chef_params)
             flash[:success] = "Your account has been edited successfully"
             redirect_to @chef 
@@ -40,7 +40,6 @@ class ChefsController < ApplicationController
     end
 
     def destroy
-        @chef = Chef.find(params[:id])
         @chef.destroy
         flash[:danger] = "Chef and all associated recipes has been deleted!"
         redirect_to chefs_path
@@ -50,6 +49,10 @@ class ChefsController < ApplicationController
 
     def chef_params
         params.require(:chef).permit(:name,:email,:password,:password_confirmation)
+    end
+
+    def set_chef
+        @chef = Chef.find(params[:id])
     end
 
 end
