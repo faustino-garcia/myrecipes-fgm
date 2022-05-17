@@ -28,4 +28,14 @@ class CommentTest < ActiveSupport::TestCase
         assert_not @comment.valid?
     end
 
+    test "Chef id should be present" do
+        @comment.chef_id = " "
+        assert_not @comment.valid?
+    end
+
+    test "Recipe id should be present" do
+        @comment.recipe_id = " "
+        assert_not @comment.valid?
+    end
+
 end
