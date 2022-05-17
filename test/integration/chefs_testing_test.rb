@@ -3,8 +3,7 @@ require "test_helper"
 class ChefsTestingTest < ActionDispatch::IntegrationTest
 
   def setup
-    @chef = Chef.create!(name: "Christina", email: "ChrisChef@example.com",
-                    password: "password", password_confirmation: "password")
+    @chef = Chef.create!(name:"Oropeza",email:"ChefOropeza@gmail.com",password:"password",password_confirmation:"password")
     @chef2 = Chef.create!(name: "Abril", email: "AbrilChef@example.com",
                     password: "password", password_confirmation: "password")
   end
@@ -17,6 +16,7 @@ class ChefsTestingTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete chef" do
+    sign_in_as(@chef2,"password")
     get chefs_path
     assert_template 'chefs/index'
     assert_difference 'Chef.count',-1 do
