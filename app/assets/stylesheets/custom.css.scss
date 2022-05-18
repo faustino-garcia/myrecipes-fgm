@@ -1,18 +1,18 @@
-$navbar-default-bg: black;
-$default-green: #073b15;
-$blue-yonder: #4267B2;
+$primary: #090909;
+$secundary: #4b5043;
+$third: #9bc4bc;
+$light: #d3ffe9;
+$light-blue: #8ddbe0;
+$default-green: #547302;
+$default-blue: #1b377f;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-nav.navbar {
-  background-color: $blue-yonder;
-}
-
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
+  color: $light;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -20,8 +20,30 @@ nav.navbar {
   align-items: center;
 }
 
-nav.navbar .nav-link {
-  color: white;
+.navbar-nav {
+  gap: 25px;
+}
+
+.navbar-inverse .navbar-nav > li{
+    a{
+      padding-right: 20px;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-decoration: none;
+    :hover{
+    color: #fff;
+    }
+  }
+}
+
+
+.dropdown-menu > li > a {
+  color: $primary;
+}
+
+#all-ingredients-tag{
+  color: $light;
+  background-color: $secundary;
 }
 
 #logo:hover {
@@ -41,8 +63,8 @@ p.lead {
 }
 
 .btn.btn-lg {
-  background-color: $blue-yonder;
-  border-color: $blue-yonder;
+  background-color: $default-blue;
+  border-color: $default-blue;
 }
 
 .center {
@@ -106,7 +128,7 @@ footer ul li {
 }
 
 .chef-title{
-  color: var($blue-yonder);
+  color: $default-blue;
   font-weight: bold;
   font-size: 1.25em;
 }
@@ -172,3 +194,13 @@ footer ul li {
   height: 80%;
   overflow: auto;
 }
+
+
+
+// .dropdown-menu li a {
+//   color: $primary;
+// }
+
+// #all-ingredients-link a{
+//   color: $secundary;
+// }
