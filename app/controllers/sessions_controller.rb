@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
         #Verifying if the chef actually exists
         if chef && chef.authenticate(params[:session][:password])
             session[:chef_id] = chef.id #Storing an encrypted version of its ID in the cookies
+            cookies.signed[:chef_id] = chef.id
             flash[:success] = "You have successfully loged in"
             redirect_to chef
         else 
