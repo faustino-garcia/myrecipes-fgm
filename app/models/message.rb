@@ -5,7 +5,7 @@ class Message < ApplicationRecord
     validates :chef_id, presence: true
 
     def self.most_recent 
-        order(:created_at).last(10) #Only grabs the last 10 
+        order(:created_at).last(7) #Only grabs the last 7
     end
 
 end 
