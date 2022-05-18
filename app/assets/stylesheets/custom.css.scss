@@ -114,3 +114,13 @@ footer ul li {
 .pagination {
   justify-content: center;
 }
+
+.input_checkbox input{
+  width: auto !important;
+}
+
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+  margin-top: -6px;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
