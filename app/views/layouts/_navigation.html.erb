@@ -42,8 +42,10 @@
                         <% Ingredient.all.each do |ingredient| %>
                             <li> <%= link_to ingredient.name,ingredient_path(ingredient) %> </li>
                         <% end %>
+                        <% if logged_in? && !current_chef.admin? %>
                         <li class="divider" role="separator"></li>
                         <li> <%= link_to "New ingredient",new_ingredient_path %> </li>
+                        <% end %>
                     </ul>
                 </li>
                 <li class="nav-item">
