@@ -7,7 +7,7 @@
     <hr />
         <div class="pull-right">
             <p class="center"><em>Created by:</em></p>
-            <p class="center"><%= link_to gravatar_for(@recipe.chef),recipe_path %></p>
+            <p class="center"><%= link_to gravatar_for(@recipe.chef),chef_path(@recipe.chef) %></p>
             <p class="center">
                 <small><%= @recipe.chef.name.capitalize %></small>
                 <div class="pull-right"> <%= time_ago_in_words(@recipe.created_at) %> ago </div>
