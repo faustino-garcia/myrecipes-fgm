@@ -1,0 +1,11 @@
+<%# Since we called the partial as:  %>
+<%# <%= render partial:'comments/comments',object: @comments %> 
+<%# In the recipes show.html.erb, we can reference comments without the @  %>
+
+<%= will_paginate comments %>
+
+<% comments.each do |comment| %>
+    <%= render(partial: 'comments/comment',object: comment) %>
+<% end %>
+
+<%# <%= will_paginate comments %> 
