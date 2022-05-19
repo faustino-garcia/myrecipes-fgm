@@ -9,7 +9,7 @@ class ChefsController < ApplicationController
     end
 
     def index 
-        @chefs = Chef.paginate(page: params[:page], per_page: 5)
+        @chefs = Chef.paginate(page: params[:page], per_page: 4)
     end
 
     def create
