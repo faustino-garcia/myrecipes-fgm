@@ -51,6 +51,14 @@ $default-blue: #1b377f;
   text-decoration: none;
 }
 
+
+body {
+  background-image: asset_url("background10.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .jumbotron {
   background-color: hsl(0, 0%, 94%);
   background-image: asset_url("cover_image.jpg");
@@ -65,11 +73,28 @@ p.lead {
 .btn-secondary{
   background-color: $secondary !important;
   border-color: $secondary !important;
+  color: white !important;
 }
 
 .btn-secondary:hover{
   background-color: $primary !important;
   border-color: $primary !important;
+  color: white !important;
+}
+
+.btn-blue{
+  background-color: $default-blue !important;
+  border-color: $default-blue !important;
+  color: white !important;
+}
+
+.btn-blue:hover{
+  background-color: hsl(223,65,60) !important;
+  border-color: hsl(223,65,60) !important;
+}
+
+.btn-danger{
+  color: white !important;
 }
 
 .center {
@@ -243,4 +268,37 @@ footer ul li {
 
 .ingredient-well{
   border-radius: 100%;
+  border: 1px solid;
+}
+
+.recipe-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+.recipe-footer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.profile-card{
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-bottom: 2px;
+  }
+}
+
+.left{
+  width: 45%;
+  align-self: flex-end;
 }
