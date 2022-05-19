@@ -1,21 +1,23 @@
 <%= render 'shared/page_title', title: "showing all chefs" %>
 
-<div align="center">
+<div align="center" class="cards-main-container">
     <%= will_paginate @chefs %>
-    <% @chefs.each do |chef|%>
-        <ul class="listing">
-            <div class="row">
-                <div class="well col-md-4 col-md-offset-4">
-                    <li> <%= link_to gravatar_for(chef),chef_path(chef) %> </li>
-                    <li class="chef-title"> <%= link_to chef.name.capitalize, chef_path(chef) %> </li>
-                    <li><small> <%= pluralize(chef.recipes.count, "recipe") if chef.recipes %> </small></li>
-                    <% if logged_in? && current_chef.admin? && !chef.admin? %> 
-                        <li><%= link_to "Delete this chef", chef_path(chef), method: :delete, 
-                        data: {confirm: "Are you sure you want to delete this chef and all associated recipes?"} %></li>
-                    <% end %>
-                </div>
-            </div>
-        </ul>
-    <% end %>
+        <div class="cards-container chefs-cards-container">
+            <% @chefs.each do |chef|%>
+                <ul class="listing">
+                    <div class="row">
+                        <div class="well">
+                            <li> <%= link_to gravatar_for(chef),chef_path(chef) %> </li>
+                            <li class="chef-title"> <%= link_to chef.name.capitalize, chef_path(chef) %> </li>
+                            <li><small> <%= pluralize(chef.recipes.count, "recipe") if chef.recipes %> </small></li>
+                            <% if logged_in? && current_chef.admin? && !chef.admin? %> 
+                                <li><%= link_to "Delete this chef", chef_path(chef), method: :delete, 
+                                data: {confirm: "Are you sure you want to delete this chef and all associated recipes?"} %></li>
+                            <% end %>
+                        </div>
+                    </div>
+                </ul>
+            <% end %>
+        </div>
     <%= will_paginate @chefs %>
 </div>

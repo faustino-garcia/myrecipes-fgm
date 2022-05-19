@@ -1,5 +1,5 @@
 $primary: #090909;
-$secundary: #4b5043;
+$secondary: #4b5043;
 $third: #9bc4bc;
 $light: #d3ffe9;
 $light-blue: #8ddbe0;
@@ -43,7 +43,7 @@ $default-blue: #1b377f;
 
 #all-ingredients-tag{
   color: $light;
-  background-color: $secundary;
+  background-color: $secondary;
 }
 
 #logo:hover {
@@ -62,9 +62,14 @@ p.lead {
   font-weight: bold;
 }
 
-.btn.btn-lg {
-  background-color: $default-blue;
-  border-color: $default-blue;
+.btn-secondary{
+  background-color: $secondary !important;
+  border-color: $secondary !important;
+}
+
+.btn-secondary:hover{
+  background-color: $primary !important;
+  border-color: $primary !important;
 }
 
 .center {
@@ -125,6 +130,7 @@ footer ul li {
 .listing {
   list-style: none;
   padding-left: 0;
+  width: 100px;
 }
 
 .chef-title{
@@ -135,6 +141,11 @@ footer ul li {
 
 .pagination {
   justify-content: center;
+}
+
+.pagination > .active > a {
+  background-color: $secondary !important;
+  border-color: $secondary !important;
 }
 
 .input_checkbox input{
@@ -195,12 +206,41 @@ footer ul li {
   overflow: auto;
 }
 
+.badge{
+  background-color: $light-blue;
+  margin: 0.25em;
+}
 
+.cards-main-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
 
-// .dropdown-menu li a {
-//   color: $primary;
-// }
+.cards-container {
+  height: 380px;
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
 
-// #all-ingredients-link a{
-//   color: $secundary;
-// }
+.chefs-cards-container {
+  min-height: 320px;
+  max-height: 480px;
+  min-width: 320px;
+  max-width: 480px;
+  gap: 4em;
+  .listing{
+    width: 35%;
+  }
+}
+
+.ingredient-well{
+  border-radius: 100%;
+}

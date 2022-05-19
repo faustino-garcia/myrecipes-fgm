@@ -35,7 +35,7 @@ class IngredientsController < ApplicationController
    end
 
    def index
-    @ingredients = Ingredient.paginate(page: params[:page], per_page: 5)
+    @ingredients = Ingredient.paginate(page: params[:page], per_page: 6)
    end
 
 private
