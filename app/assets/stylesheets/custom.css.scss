@@ -302,3 +302,13 @@ footer ul li {
   width: 45%;
   align-self: flex-end;
 }
+
+.ingredients-checkbox-container{
+  margin: 3.25em auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 1em;
+}
